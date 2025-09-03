@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Facebook, Instagram, Linkedin } from 'lucide-react';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -86,26 +86,9 @@ const ContactPage = () => {
               
               {/* Contact Information Overlay */}
               <div className="absolute bottom-8 left-8 right-8 md:left-16 md:right-16">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   
-                  {/* Phone Contact */}
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    viewport={{ once: true }}
-                    className="space-y-2"
-                  >
-                    <p className="text-sm font-medium text-white/70 uppercase tracking-wider">
-                      Call Us
-                    </p>
-                    <Link 
-                      href="tel:+9647711152005"
-                      className="text-2xl md:text-3xl font-medium text-white hover:text-brand-primary transition-colors duration-300"
-                    >
-                      +964 771 115 2005
-                    </Link>
-                  </motion.div>
+
 
                   {/* Location */}
                   <motion.div
@@ -150,7 +133,7 @@ const ContactPage = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-16 md:py-24 bg-bg-primary">
+      <section className="py-16 md:py-24 bg-black">
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             
@@ -168,7 +151,7 @@ const ContactPage = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-neutral-black leading-tight">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-white leading-tight">
                   Collaborated with renowned global brands.
                 </h2>
               </motion.div>
@@ -179,7 +162,7 @@ const ContactPage = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <p className="text-lg text-brand-accent leading-relaxed">
+                <p className="text-lg text-white/80 leading-relaxed">
                   Please feel free to contact us, and we will be in touch shortly. Together, we can determine if there is a mutual fit and explore potential opportunities for collaboration.
                 </p>
               </motion.div>
@@ -193,24 +176,21 @@ const ContactPage = () => {
                 className="space-y-4"
               >
                 <div className="flex items-center space-x-4">
-                  <span className="text-sm font-medium text-brand-accent uppercase tracking-wider">
+                  <span className="text-sm font-medium text-white/70 uppercase tracking-wider">
                     Follow Us
                   </span>
-                  <div className="flex-1 h-px bg-brand-accent/20" />
+                  <div className="flex-1 h-px bg-white/20" />
                 </div>
                 
                 <div className="flex space-x-4">
-                  <Link href="https://facebook.com" className="w-10 h-10 bg-neutral-black rounded-full flex items-center justify-center hover:bg-brand-primary transition-colors duration-300 group">
+                  <Link href="https://www.facebook.com/SherHub0" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-neutral-black rounded-full flex items-center justify-center hover:bg-brand-primary transition-colors duration-300 group">
                     <Facebook size={18} className="text-white group-hover:scale-110 transition-transform duration-200" />
                   </Link>
-                  <Link href="https://linkedin.com" className="w-10 h-10 bg-neutral-black rounded-full flex items-center justify-center hover:bg-brand-primary transition-colors duration-300 group">
+                  <Link href="https://www.linkedin.com/company/sherhub/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-neutral-black rounded-full flex items-center justify-center hover:bg-brand-primary transition-colors duration-300 group">
                     <Linkedin size={18} className="text-white group-hover:scale-110 transition-transform duration-200" />
                   </Link>
-                  <Link href="https://instagram.com" className="w-10 h-10 bg-neutral-black rounded-full flex items-center justify-center hover:bg-brand-primary transition-colors duration-300 group">
+                  <Link href="https://www.instagram.com/sherhub0" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-neutral-black rounded-full flex items-center justify-center hover:bg-brand-primary transition-colors duration-300 group">
                     <Instagram size={18} className="text-white group-hover:scale-110 transition-transform duration-200" />
-                  </Link>
-                  <Link href="https://twitter.com" className="w-10 h-10 bg-neutral-black rounded-full flex items-center justify-center hover:bg-brand-primary transition-colors duration-300 group">
-                    <Twitter size={18} className="text-white group-hover:scale-110 transition-transform duration-200" />
                   </Link>
                 </div>
               </motion.div>
@@ -222,7 +202,7 @@ const ContactPage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className=" rounded-2xl p-8 shadow-xl"
+              className="bg-neutral-black/50 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/10"
             >
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -232,7 +212,7 @@ const ContactPage = () => {
                     placeholder="Enter Your Name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-all duration-300"
+                    className="w-full px-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-all duration-300"
                     required
                   />
                 </div>
@@ -244,7 +224,7 @@ const ContactPage = () => {
                     placeholder="Enter Your Email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-all duration-300"
+                    className="w-full px-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-all duration-300"
                     required
                   />
                 </div>
@@ -256,7 +236,7 @@ const ContactPage = () => {
                     placeholder="Phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-all duration-300"
+                    className="w-full px-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-all duration-300"
                   />
                 </div>
                 
@@ -267,7 +247,7 @@ const ContactPage = () => {
                     placeholder="Subject"
                     value={formData.subject}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-all duration-300"
+                    className="w-full px-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-all duration-300"
                     required
                   />
                 </div>
@@ -279,7 +259,7 @@ const ContactPage = () => {
                     value={formData.message}
                     onChange={handleInputChange}
                     rows={5}
-                    className="w-full px-4 py-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-all duration-300 resize-vertical"
+                    className="w-full px-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-all duration-300 resize-vertical"
                     required
                   />
                 </div>

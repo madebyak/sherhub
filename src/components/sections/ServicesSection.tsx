@@ -88,14 +88,14 @@ const ServicesSection = () => {
               height={24}
               className="w-10 h-10"
             />
-            <span className="text-md md:text-lg font-regular text-neutral-gray">
+            <span className="text-md md:text-lg font-regular text-white/70">
               OUR SERVICES
             </span>
           </div>
 
           {/* Subheading */}
           <div className="max-w-7xl">
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-regular text-neutral-black leading-tight">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-regular text-white leading-tight">
               At SherHub, we believe that delivering real value to our clients begins with a deep understanding of their needs and aspirations. Our services are designed to provide comprehensive solutions that achieve this and leave a lasting impact.
             </p>
           </div>
@@ -125,14 +125,14 @@ const ServicesSection = () => {
                   </div>
                   
                   {/* Title */}
-                  <h3 className="text-xl md:text-2xl font-medium text-bg-primary mb-6 group-hover:text-brand-primary transition-colors duration-300">
+                                        <h3 className="text-xl md:text-2xl font-medium text-white mb-6 group-hover:text-brand-primary transition-colors duration-300">
                     {service.title}
                   </h3>
                   
                   {/* Bullet Points */}
                   <ul className="space-y-3">
                     {service.bullets.map((bullet, bulletIndex) => (
-                      <li key={bulletIndex} className="flex items-start gap-3 text-neutral-gray group-hover:text-bg-primary transition-colors duration-300">
+                                                <li key={bulletIndex} className="flex items-start gap-3 text-white/70 group-hover:text-white transition-colors duration-300">
                         <span className="text-brand-primary mt-1 text-sm">•</span>
                         <span className="text-sm leading-relaxed">{bullet}</span>
                       </li>

@@ -8,7 +8,7 @@ import ReachOut from '@/components/sections/ReachOut';
 
 const AboutPage = () => {
   return (
-    <div className="bg-bg-primary min-h-screen">
+    <div className="bg-black min-h-screen">
       {/* Hero Section */}
       <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-black">
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,7 +50,7 @@ const AboutPage = () => {
       </section>
 
       {/* Our Story Section */}
-      <section className="py-16 md:py-24 bg-bg-primary">
+      <section className="py-16 md:py-24 bg-neutral-black">
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -88,7 +88,7 @@ const AboutPage = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-neutral-black mb-8">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-white mb-8">
                   Our Story
                 </h2>
               </motion.div>
@@ -98,7 +98,7 @@ const AboutPage = () => {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                <p className="text-lg md:text-2xl text-neutral-black leading-tight">
+                <p className="text-lg md:text-2xl text-white leading-tight">
                   SherHub was born from a clear and compelling idea: transforming abstract concepts into tangible achievements that their creators can take pride in, leaving a lasting mark that endures through time. From this vision, SherHub emerged as a creative force, drawing inspiration from the Kurdish word for &ldquo;lion,&rdquo; symbolizing strength, leadership, and courage, qualities that have been deeply ingrained in surrounding societies for millennia.
                 </p>
               </motion.div>
@@ -109,7 +109,7 @@ const AboutPage = () => {
                 transition={{ duration: 0.6, delay: 0.5 }}
                 viewport={{ once: true }}
               >
-                <p className="text-lg md:text-2xl text-neutral-black leading-tight">
+                <p className="text-lg md:text-2xl text-white leading-tight">
                   We embrace these symbols as we forge our own story. The lion, with its powerful presence, is ever-present in our journey, while our expertise and capabilities bring every detail to life, reviving these symbols and making them a reality.
                 </p>
               </motion.div>

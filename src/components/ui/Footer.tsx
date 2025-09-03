@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Facebook, Instagram, Linkedin, Mail, Phone } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
   const menuLinks = [
@@ -14,9 +14,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { href: '#', label: 'Facebook', icon: Facebook },
-    { href: '#', label: 'Instagram', icon: Instagram },
-    { href: '#', label: 'LinkedIn', icon: Linkedin },
+    { href: 'https://www.facebook.com/SherHub0', label: 'Facebook', icon: Facebook },
+    { href: 'https://www.instagram.com/sherhub0', label: 'Instagram', icon: Instagram },
+    { href: 'https://www.linkedin.com/company/sherhub/', label: 'LinkedIn', icon: Linkedin },
   ];
 
   return (
@@ -43,7 +43,7 @@ const Footer = () => {
                   className="h-9 w-auto"
                 />
               </Link>
-              <p className="text-neutral-gray text-sm leading-relaxed max-w-sm">
+              <p className="text-white/70 text-sm leading-relaxed max-w-sm">
                 At SherHub, we transform abstract concepts into tangible achievements. Through inclusivity, innovation, and a fresh approach to ideas, we help you leave a lasting mark that endures through time.
               </p>
             </motion.div>
@@ -56,13 +56,13 @@ const Footer = () => {
               viewport={{ once: true }}
               className="space-y-6 lg:pl-8"
             >
-              <h3 className="text-bg-primary font-medium text-lg">Menu</h3>
+              <h3 className="text-white font-medium text-lg">Menu</h3>
               <nav className="space-y-4">
                 {menuLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="block text-neutral-gray hover:text-brand-primary transition-colors duration-200 text-sm"
+                    className="block text-white/70 hover:text-brand-primary transition-colors duration-200 text-sm"
                   >
                     {link.label}
                   </Link>
@@ -80,34 +80,30 @@ const Footer = () => {
             >
               {/* Contact Info */}
               <div className="space-y-4">
-                <h3 className="text-bg-primary font-medium text-lg">Contact Us</h3>
+                <h3 className="text-white font-medium text-lg">Contact Us</h3>
                 <div className="space-y-3">
                   <Link 
                     href="mailto:info@sherhub.com"
-                    className="flex items-center gap-3 text-neutral-gray hover:text-brand-primary transition-colors duration-200 text-sm group"
+                    className="flex items-center gap-3 text-white/70 hover:text-brand-primary transition-colors duration-200 text-sm group"
                   >
                     <Mail size={16} className="group-hover:scale-110 transition-transform duration-200" />
                     info@sherhub.com
                   </Link>
-                  <Link 
-                    href="tel:+9647711152005"
-                    className="flex items-center gap-3 text-neutral-gray hover:text-brand-primary transition-colors duration-200 text-sm group"
-                  >
-                    <Phone size={16} className="group-hover:scale-110 transition-transform duration-200" />
-                    +964 771 115 2005
-                  </Link>
+
                 </div>
               </div>
 
               {/* Social Networks */}
               <div className="space-y-4">
-                <h3 className="text-bg-primary font-medium text-lg">Social Networks</h3>
+                <h3 className="text-white font-medium text-lg">Social Networks</h3>
                 <div className="space-y-3">
                   {socialLinks.map((social) => (
                     <Link
                       key={social.label}
                       href={social.href}
-                      className="flex items-center gap-3 text-neutral-gray hover:text-brand-primary transition-colors duration-200 text-sm group"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 text-white/70 hover:text-brand-primary transition-colors duration-200 text-sm group"
                     >
                       <social.icon 
                         size={16} 
@@ -116,6 +112,27 @@ const Footer = () => {
                       {social.label}
                     </Link>
                   ))}
+                </div>
+              </div>
+
+              {/* ISO Certifications */}
+              <div className="space-y-4">
+                <h3 className="text-white font-medium text-lg">Certifications</h3>
+                <div className="flex items-center gap-4">
+                  <Image
+                    src="https://upload.wikimedia.org/wikipedia/commons/archive/0/0f/20200218083856%21ISO_9001-2015.svg"
+                    alt="ISO 9001:2015 Certified"
+                    width={60}
+                    height={40}
+                    className="opacity-80 hover:opacity-100 transition-opacity duration-200"
+                  />
+                  <Image
+                    src="/iso-14001.svg"
+                    alt="ISO 14001 Certified"
+                    width={60}
+                    height={40}
+                    className="opacity-80 hover:opacity-100 transition-opacity duration-200"
+                  />
                 </div>
               </div>
             </motion.div>
@@ -133,7 +150,7 @@ const Footer = () => {
           viewport={{ once: true }}
           className="py-6 text-left"
         >
-          <p className="text-neutral-gray text-sm">
+          <p className="text-white/70 text-sm">
             © {new Date().getFullYear()} SherHub. All rights reserved. 
             <span className="mx-2">•</span>
             Beyond Ordinary.

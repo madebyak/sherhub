@@ -38,14 +38,14 @@ const AboutUs = () => {
               height={24}
               className="w-10 h-10"
             />
-            <span className="text-md md:text-lg font-regular text-neutral-gray">
+            <span className="text-md md:text-lg font-regular text-white/70">
               ABOUT US
             </span>
           </div>
 
           {/* Subheading container */}
           <div className="max-w-7xl">
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-regular text-neutral-black leading-tight">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-regular text-white leading-tight">
               SherHub was born from a clear and compelling idea: transforming abstract concepts into tangible achievements that their creators can take pride in, leaving a lasting mark that endures through time. From this vision, SherHub emerged as a creative force, drawing inspiration from the Kurdish word for &ldquo;lion,&rdquo; symbolizing strength, leadership, and courage, qualities that have been deeply ingrained in surrounding societies for millennia.
             </p>
           </div>

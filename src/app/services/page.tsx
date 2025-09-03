@@ -74,7 +74,7 @@ const ServicesPage = () => {
   ];
 
   return (
-    <div className="bg-bg-primary min-h-screen">
+    <div className="bg-black min-h-screen">
       {/* Hero Section */}
       <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-black">
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -128,7 +128,7 @@ const ServicesPage = () => {
       </section>
 
       {/* Services Grid Section */}
-      <section className="py-16 md:py-24 bg-bg-primary">
+      <section className="py-16 md:py-24 bg-neutral-black">
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -146,7 +146,7 @@ const ServicesPage = () => {
                 height={24}
                 className="w-10 h-10"
               />
-              <span className="text-md md:text-lg font-regular text-neutral-gray">
+              <span className="text-md md:text-lg font-regular text-white/70">
                 WHAT WE OFFER
               </span>
             </div>
@@ -176,19 +176,19 @@ const ServicesPage = () => {
                     </div>
                     
                     {/* Title */}
-                    <h3 className="text-xl md:text-2xl font-medium text-neutral-black mb-4 group-hover:text-brand-primary transition-colors duration-300">
+                    <h3 className="text-xl md:text-2xl font-medium text-white mb-4 group-hover:text-brand-primary transition-colors duration-300">
                       {service.title}
                     </h3>
                     
                     {/* Description */}
-                    <p className="text-neutral-gray mb-6 leading-relaxed group-hover:text-neutral-black transition-colors duration-300">
+                    <p className="text-white/70 mb-6 leading-relaxed group-hover:text-neutral-black transition-colors duration-300">
                       {service.description}
                     </p>
                     
                     {/* Bullet Points */}
                     <ul className="space-y-3">
                       {service.bullets.map((bullet, bulletIndex) => (
-                        <li key={bulletIndex} className="flex items-start gap-3 text-neutral-gray group-hover:text-neutral-black transition-colors duration-300">
+                        <li key={bulletIndex} className="flex items-start gap-3 text-white/70 group-hover:text-neutral-black transition-colors duration-300">
                           <span className="text-brand-primary mt-1 text-sm">•</span>
                           <span className="text-sm leading-relaxed">{bullet}</span>
                         </li>

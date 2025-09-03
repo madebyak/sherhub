@@ -71,7 +71,7 @@ const WhySherHub = () => {
         >
           {/* Subheading */}
           <div className="max-w-6xl mx-auto text-center">
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-regular text-neutral-black leading-tight">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-regular text-white leading-tight">
               In a world where companies and ideas often blend into repetition, we at SherHub thrive on standing out! Through inclusivity, innovation, and a fresh approach to ideas, we showcase why we are the right choice for you:
             </p>
           </div>
@@ -107,10 +107,10 @@ const WhySherHub = () => {
                   
                   {/* Content */}
                   <div className="space-y-4">
-                    <h3 className="text-xl md:text-2xl font-semibold text-bg-primary group-hover:text-brand-primary transition-colors duration-300">
+                    <h3 className="text-xl md:text-2xl font-semibold text-white group-hover:text-brand-primary transition-colors duration-300">
                       {point.title}
                     </h3>
-                    <p className="text-neutral-gray leading-relaxed group-hover:text-bg-primary/90 transition-colors duration-300">
+                    <p className="text-white/70 leading-relaxed group-hover:text-white/90 transition-colors duration-300">
                       {point.description}
                     </p>
                   </div>

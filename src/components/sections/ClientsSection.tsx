@@ -33,9 +33,19 @@ const ClientsSection = () => {
       title: "Grofin"
     },
     {
-      src: "/clients/Asset 1@4x (002).png",
+      src: "/clients/igfi-1.png",
       alt: "Client Logo",
       title: "Client"
+    },
+    {
+      src: "/clients/New-UNFPA-Iraq-logo_EN-8-2019----White2V2.png",
+      alt: "UNFPA Iraq",
+      title: "UNFPA Iraq"
+    },
+    {
+      src: "/clients/igfi.png",
+      alt: "IGFI",
+      title: "IGFI"
     }
   ];
 
@@ -58,7 +68,7 @@ const ClientsSection = () => {
               height={24}
               className="w-10 h-10"
             />
-            <span className="text-md md:text-lg font-regular text-neutral-gray">
+            <span className="text-md md:text-lg font-regular text-white/70">
               OUR CLIENTS
             </span>
           </div>

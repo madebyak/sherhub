@@ -36,7 +36,7 @@ const Navbar = () => {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-bg-primary hover:text-orange-500 transition-colors duration-200 font-medium"
+                className="text-white hover:text-orange-500 transition-colors duration-200 font-medium"
               >
                 {link.label}
               </Link>
@@ -47,7 +47,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-bg-primary hover:text-brand-primary focus:outline-none"
+              className="text-white hover:text-brand-primary focus:outline-none"
             >
               <svg
                 className="h-6 w-6"
@@ -76,7 +76,7 @@ const Navbar = () => {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="block px-3 py-2 text-bg-primary hover:text-orange-500 font-medium transition-colors duration-200"
+                  className="block px-3 py-2 text-white hover:text-orange-500 font-medium transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}

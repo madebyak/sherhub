@@ -36,7 +36,7 @@ const VideoHero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-bg-primary font-normal leading-tight mb-6
+            className="text-white font-normal leading-tight mb-6
                        text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl
                        tracking-wide"
           >
@@ -48,7 +48,7 @@ const VideoHero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-bg-primary/90 font-normal leading-relaxed mb-12
+            className="text-white/90 font-normal leading-relaxed mb-12
                        text-base sm:text-lg md:text-xl lg:text-2xl
                        max-w-4xl mx-auto"
           >
@@ -63,11 +63,11 @@ const VideoHero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             onClick={scrollToNext}
             className="group inline-flex items-center gap-3 px-8 py-4 
-                       border-2 border-bg-primary text-bg-primary
+                       border-2 border-white text-white
                        rounded-full font-medium text-lg
                        transition-all duration-300 ease-in-out
-                       hover:bg-bg-primary hover:text-neutral-black
-                       focus:outline-none focus:ring-2 focus:ring-bg-primary/50"
+                       hover:bg-white hover:text-neutral-black
+                       focus:outline-none focus:ring-2 focus:ring-white/50"
           >
             <span>Start Exploring</span>
             <ChevronDown 
@@ -88,7 +88,7 @@ const VideoHero = () => {
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="text-bg-primary/70"
+          className="text-white/70"
         >
           <ChevronDown className="h-6 w-6" />
         </motion.div>
