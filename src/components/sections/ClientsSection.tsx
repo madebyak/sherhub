@@ -23,7 +23,7 @@ const ClientsSection = () => {
       title: "Orange Corners"
     },
     {
-      src: "/clients/Arabic Logo Organization Horizontal RGB Blue.png",
+      src: "/clients/English Logo Organization Horizontal RGB White.png",
       alt: "Arabic Organization",
       title: "Arabic Organization"
     },
@@ -43,9 +43,24 @@ const ClientsSection = () => {
       title: "UNFPA Iraq"
     },
     {
-      src: "/clients/igfi.png",
-      alt: "IGFI",
-      title: "IGFI"
+      src: "/clients/INWRDAM_logo.png",
+      alt: "INWRDAM",
+      title: "INWRDAM"
+    },
+    {
+      src: "/clients/blue peace logo PNG-01.png",
+      alt: "Blue Peace",
+      title: "Blue Peace"
+    },
+    {
+      src: "/clients/IFC.png",
+      alt: "IFC",
+      title: "IFC"
+    },
+    {
+      src: "/clients/SDC.png",
+      alt: "SDC",
+      title: "SDC"
     }
   ];
 
