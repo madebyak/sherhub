@@ -9,7 +9,7 @@ const Footer = () => {
   const menuLinks = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
-    { href: '#services', label: 'Services' },
+    { href: '/services', label: 'Services' },
     { href: '/contact', label: 'Contact' },
   ];
 
@@ -25,7 +25,7 @@ const Footer = () => {
         {/* Main Footer Content */}
         <div className="py-12 md:py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-            
+
             {/* Left Column - Logo & Description */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -82,7 +82,7 @@ const Footer = () => {
               <div className="space-y-4">
                 <h3 className="text-white font-medium text-lg">Contact Us</h3>
                 <div className="space-y-3">
-                  <Link 
+                  <Link
                     href="mailto:info@sherhub.com"
                     className="flex items-center gap-3 text-white/70 hover:text-brand-primary transition-colors duration-200 text-sm group"
                   >
@@ -105,9 +105,9 @@ const Footer = () => {
                       rel="noopener noreferrer"
                       className="flex items-center gap-3 text-white/70 hover:text-brand-primary transition-colors duration-200 text-sm group"
                     >
-                      <social.icon 
-                        size={16} 
-                        className="group-hover:scale-110 transition-transform duration-200" 
+                      <social.icon
+                        size={16}
+                        className="group-hover:scale-110 transition-transform duration-200"
                       />
                       {social.label}
                     </Link>
@@ -119,20 +119,24 @@ const Footer = () => {
               <div className="space-y-4">
                 <h3 className="text-white font-medium text-lg">Certifications</h3>
                 <div className="flex items-center gap-4">
-                  <Image
-                    src="https://upload.wikimedia.org/wikipedia/commons/archive/0/0f/20200218083856%21ISO_9001-2015.svg"
-                    alt="ISO 9001:2015 Certified"
-                    width={60}
-                    height={40}
-                    className="opacity-80 hover:opacity-100 transition-opacity duration-200"
-                  />
-                  <Image
-                    src="/iso-14001.svg"
-                    alt="ISO 14001 Certified"
-                    width={60}
-                    height={40}
-                    className="opacity-80 hover:opacity-100 transition-opacity duration-200"
-                  />
+                  <Link href="https://www.iafcertsearch.org/certified-entity/9MzsNAZ3eAjBB2oI9LeWYwTA" target='_blank'>
+                    <Image
+                      src="/certificates/9001.png"
+                      alt="ISO 9001:2015 Certified"
+                      width={60}
+                      height={40}
+                      className="opacity-80 hover:opacity-100 transition-opacity duration-200"
+                    />
+                  </Link>
+                  <Link href="https://www.iafcertsearch.org/certified-entity/9MzsNAZ3eAjBB2oI9LeWYwTA" target='_blank'>
+                    <Image
+                      src="/certificates/14001.png"
+                      alt="ISO 14001 Certified"
+                      width={70}
+                      height={50}
+                      className="opacity-80 hover:opacity-100 transition-opacity duration-200"
+                    />
+                  </Link>
                 </div>
               </div>
             </motion.div>
@@ -151,7 +155,7 @@ const Footer = () => {
           className="py-6 text-left"
         >
           <p className="text-white/70 text-sm">
-            © {new Date().getFullYear()} SherHub. All rights reserved. 
+            © {new Date().getFullYear()} SherHub. All rights reserved.
             <span className="mx-2">•</span>
             Beyond Ordinary.
           </p>

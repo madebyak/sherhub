@@ -1,19 +1,37 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { Heart, Search, Users } from 'lucide-react';
 
 const WhySherHub = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+  
+  // Detect mobile screen size
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"]
   });
 
-  // Horizontal parallax effect - moves from right to left with easeInOutQuint
-  const x = useTransform(scrollYProgress, [0, 1], ["80%", "-100%"]);
+  // Responsive horizontal parallax effect
+  // Mobile: appears earlier and stays visible longer
+  // Desktop: original animation
+  const startPosition = isMobile ? "20%" : "80%";
+  const endPosition = isMobile ? "-60%" : "-100%";
+  
+  const x = useTransform(scrollYProgress, [0, 1], [startPosition, endPosition]);
   const smoothX = useSpring(x, {
     stiffness: 60,
     damping: 40,

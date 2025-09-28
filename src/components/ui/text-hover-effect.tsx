@@ -12,6 +12,58 @@ export const TextHoverEffect = ({
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
   const [hovered, setHovered] = useState(false);
   const [maskPosition, setMaskPosition] = useState({ cx: "50%", cy: "50%" });
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+  const [autoAnimating, setAutoAnimating] = useState(false);
+
+  // Detect touch device
+  useEffect(() => {
+    const checkTouchDevice = () => {
+      setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
+    };
+    
+    checkTouchDevice();
+    window.addEventListener('resize', checkTouchDevice);
+    
+    return () => window.removeEventListener('resize', checkTouchDevice);
+  }, []);
+
+  // Auto-animation for touch devices
+  useEffect(() => {
+    if (isTouchDevice && svgRef.current) {
+      setAutoAnimating(true);
+      setHovered(true);
+      
+      const animatePosition = () => {
+        const svgRect = svgRef.current?.getBoundingClientRect();
+        if (!svgRect) return;
+        
+        const centerX = svgRect.left + svgRect.width / 2;
+        const centerY = svgRect.top + svgRect.height / 2;
+        const radius = svgRect.width * 0.35;
+        
+        let angle = 0;
+        const animate = () => {
+          if (!autoAnimating) return;
+          
+          const x = centerX + Math.cos(angle) * radius;
+          const y = centerY + Math.sin(angle) * radius;
+          
+          setCursor({ x, y });
+          angle += 0.02;
+          
+          requestAnimationFrame(animate);
+        };
+        
+        animate();
+      };
+      
+      const timer = setTimeout(animatePosition, 1000);
+      return () => {
+        clearTimeout(timer);
+        setAutoAnimating(false);
+      };
+    }
+  }, [isTouchDevice, autoAnimating]);
 
   useEffect(() => {
     if (svgRef.current && cursor.x !== null && cursor.y !== null) {
@@ -32,9 +84,9 @@ export const TextHoverEffect = ({
       height="100%"
       viewBox="0 0 1200 400"
       xmlns="http://www.w3.org/2000/svg"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      onMouseMove={(e) => setCursor({ x: e.clientX, y: e.clientY })}
+      onMouseEnter={!isTouchDevice ? () => setHovered(true) : undefined}
+      onMouseLeave={!isTouchDevice ? () => setHovered(false) : undefined}
+      onMouseMove={!isTouchDevice ? (e) => setCursor({ x: e.clientX, y: e.clientY }) : undefined}
       className="select-none w-full h-full"
       preserveAspectRatio="xMidYMid meet"
       style={{ 
