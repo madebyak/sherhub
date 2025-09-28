@@ -39,7 +39,7 @@ export const TextHoverEffect = ({
         
         const centerX = svgRect.left + svgRect.width / 2;
         const centerY = svgRect.top + svgRect.height / 2;
-        const radius = svgRect.width * 0.35;
+        const radius = svgRect.width * 0.55;
         
         let angle = 0;
         const animate = () => {
