@@ -5,7 +5,7 @@ import { TextHoverEffect } from '@/components/ui/text-hover-effect';
 
 const LogoAnimated = () => {
   return (
-    <section className="py-2 bg-[#000000]">
+    <section className="hidden md:block py-2 bg-[#000000]">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
